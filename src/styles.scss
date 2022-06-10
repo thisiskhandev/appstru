@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+$font-primary: "Poppins", sans-serif;
+$color-primary: #3334;
+$color-secondary: #333;
+$color-cta: #faa61a;
+$color-cta-dark: #f09800;
+$color-light: #e6e6e6;
+$shadow: 0px 0px 30px 0px #0000002e;
+$transition: 0.4s;
+@mixin padding-lg {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+@mixin padding-sm {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: $font-primary;
+  #root {
+    overflow-x: hidden;
+  }
+}
+h1 {
+  font-size: 45px;
+  font-weight: 700;
+  text-transform: capitalize;
+  line-height: 1.2;
+}
+h2 {
+  font-size: 45px;
+  font-weight: 700;
+  text-transform: capitalize;
+  line-height: 1.2;
+}
+h3 {
+  font-size: 25px;
+}
+p,
+article {
+  font-size: 18px;
+  font-weight: 500;
+}
+a.cta {
+  padding: 15px 0;
+  background-color: $color-cta;
+  color: #fff;
+  text-align: center;
+  width: 282px;
+  > span.cta_icon {
+    padding: 15.1px;
+    background: $color-cta-dark;
+    display: inline;
+  }
+  > span.cta_text {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+.padding {
+  @include padding-lg();
+}
+.center_start {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.center_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.hero {
+  background-image: url(../src/assets/background-shape.png);
+  background-size: cover;
+  background-position: top center;
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  color: #fff;
+  @include padding-lg();
+}
+.services {
+  background-color: $color-light;
+  @include padding-lg();
+  .services_card {
+    box-shadow: $shadow;
+    border-radius: 10px;
+    padding: 10px 22px;
+    transition: $transition;
+    h4 {
+      font-size: 22px;
+      font-weight: 600;
+    }
+    h5,
+    p {
+      font-size: 17px;
+    }
+    h5 {
+      font-weight: 600;
+      color: $color-cta;
+    }
+    &:hover {
+      transition: $transition;
+      color: #fff;
+      background-color: $color-cta;
+      h5 {
+        color: #fff;
+      }
+    }
+  }
+}
+button.btn_industries {
+  font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 18px;
+  &:hover {
+    box-shadow: $shadow;
+  }
+  &:focus {
+    box-shadow: none;
+  }
+}
+// ---------- MEDIA QURIES
+@media only screen and (max-width: 991px) {
+  h1,
+  h2 {
+    font-size: 35px;
+  }
+  .hero {
+    @include padding-sm();
+  }
+  .services {
+    @include padding-sm();
+  }
+}
+@media only screen and (max-width: 767px) {
+  h1,
+  h2 {
+    font-size: 35px - 5px;
+  }
+  p,
+  article {
+    font-size: 16px;
+  }
+  .padding {
+    @include padding-sm();
+  }
+}
