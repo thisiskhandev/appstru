@@ -48,11 +48,11 @@ const IndustriesShot = [
 
 const Industries = () => {
   const [images, setImages] = useState(ecommerce);
-  const [isActive, setIsActive] = useState(false);
+  // const [isActive, setIsActive] = useState(false);
 
-  const handleClick = () => {
-    setIsActive((current) => !current);
-  };
+  // const handleClick = () => {
+  //   setIsActive((current) => !current);
+  // };
 
   return (
     <>
@@ -77,10 +77,10 @@ const Industries = () => {
                       className={
                         "btn rounded-3 w-100 py-3 my-3 bg-light text-black border-0 btn_industries"
                       }
-                      style={{
-                        boxShadow: isActive ? "0px 0px 30px 0px #0000002e" : "",
-                      }}
-                      onClick={(() => setImages(val.imgURL), handleClick)}
+                      // style={{
+                      //   boxShadow: isActive ? "0px 0px 30px 0px #0000002e" : "",
+                      // }}
+                      onClick={(() => setImages(val.imgURL))}
                     >
                       <span>
                         <img

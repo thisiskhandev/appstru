@@ -24,7 +24,7 @@ const Navigation = () => {
             className="collapse navbar-collapse justify-content-lg-center w-lg-100"
             id="navbarNav"
           >
-            <ul className="navbar-nav  justify-content-lg-around align-item-lg-center w-75">
+            <ul className="navbar-nav  justify-content-lg-around align-items-center w-75">
               <li className="nav-item">
                 <NavLink className="nav-link active" aria-current="page" to="/">
                   Home
